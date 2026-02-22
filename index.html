@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Air Force - Guardians of the Skies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --baf-blue: #005cbf;
+            --baf-dark: #0f172a;
+            --baf-accent: #dc2626;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1559800732-2432a2492f3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--baf-accent);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Rank Insignia Placeholder Styling */
+        .rank-box {
+            border-left: 4px solid var(--baf-blue);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-fighter-jet text-red-500 text-2xl"></i>
+                    <span class="font-heading font-bold text-2xl tracking-wider">BANGLADESH AIR FORCE</span>
+                </div>
+                <div class="hidden md:flex space-x-6 font-medium text-sm uppercase tracking-wide">
+                    <a href="#history" class="hover:text-red-400 transition">History</a>
+                    <a href="#organization" class="hover:text-red-400 transition">Organization</a>
+                    <a href="#bases" class="hover:text-red-400 transition">Bases</a>
+                    <a href="#inventory" class="hover:text-red-400 transition">Inventory</a>
+                    <a href="#careers" class="hover:text-red-400 transition">Careers</a>
+                    <a href="#vision" class="hover:text-red-400 transition">Goal 2030</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 uppercase tracking-tighter">Guardians of the Skies</h1>
+            <p class="text-xl md:text-2xl font-light mb-8 opacity-90">"In War, In Peace, We are Everywhere for Our Country"</p>
+            <div class="flex justify-center gap-4">
+                <a href="#history" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded font-bold uppercase tracking-wider transition">Our Legacy</a>
+                <a href="#inventory" class="border-2 border-white hover:bg-white hover:text-slate-900 text-white px-8 py-3 rounded font-bold uppercase tracking-wider transition">Our Fleet</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission & Intro -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6 border-l-4 border-red-600 pl-4">Mission & Overview</h2>
+                    <p class="text-lg leading-relaxed text-slate-600 mb-4">
+                        The Bangladesh Air Force (BAF) stands as the formidable aerial warfare branch of the Bangladesh Armed Forces. Its crucial mission encompasses safeguarding the nation's airspace, providing essential air support to ground and naval operations, and actively participating in vital humanitarian aid and international peacekeeping efforts.
+                    </p>
+                    <p class="text-lg leading-relaxed text-slate-600">
+                        Since its heroic inception in 1971, the BAF has evolved into a modern, highly disciplined, and technologically advanced force, relentlessly dedicated to defending sovereignty and contributing to global stability.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-100 p-6 rounded-lg text-center card-hover">
+                        <i class="fas fa-shield-alt text-4xl text-blue-600 mb-3"></i>
+                        <h3 class="font-bold text-slate-800">Air Defense</h3>
+                        <p class="text-sm text-slate-500 mt-2">Protecting national airspace from unauthorised intrusions.</p>
+                    </div>
+                    <div class="bg-slate-100 p-6 rounded-lg text-center card-hover">
+                        <i class="fas fa-crosshairs text-4xl text-red-600 mb-3"></i>
+                        <h3 class="font-bold text-slate-800">Close Air Support</h3>
+                        <p class="text-sm text-slate-500 mt-2">Precision firepower assisting ground operations.</p>
+                    </div>
+                    <div class="bg-slate-100 p-6 rounded-lg text-center card-hover">
+                        <i class="fas fa-hands-helping text-4xl text-green-600 mb-3"></i>
+                        <h3 class="font-bold text-slate-800">Humanitarian Aid</h3>
+                        <p class="text-sm text-slate-500 mt-2">Relief supplies during floods and cyclones.</p>
+                    </div>
+                    <div class="bg-slate-100 p-6 rounded-lg text-center card-hover">
+                        <i class="fas fa-globe-asia text-4xl text-indigo-600 mb-3"></i>
+                        <h3 class="font-bold text-slate-800">Peacekeeping</h3>
+                        <p class="text-sm text-slate-500 mt-2">Logistics and support for UN missions worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Background -->
+    <section id="history" class="py-16 bg-slate-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold text-slate-900 section-title">Historical Genesis</h2>
+            </div>
+            
+            <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-slate-800 text-white p-8 flex flex-col justify-center items-center text-center">
+                        <div class="text-6xl font-bold font-heading text-red-500 mb-2">1971</div>
+                        <div class="text-xl uppercase tracking-widest mb-6">War of Liberation</div>
+                        <i class="fas fa-plane-propeller text-5xl opacity-50"></i>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-800">The Legend of "Kilo Flight"</h3>
+                        <p class="text-slate-600 mb-4">
+                            The BAF's origin is deeply intertwined with the 1971 War of Liberation. A small group of defecting Bengali pilots and technicians formed <strong>"Kilo Flight"</strong>. Operating against overwhelming odds, they commenced operations with an incredibly limited fleet:
+                        </p>
+                        <ul class="list-disc pl-5 mb-6 text-slate-700 space-y-2">
+                            <li><strong>DC-3 Dakota</strong> (Transport/Bomber)</li>
+                            <li><strong>DHC-3 Otter</strong> (Utility)</li>
+                            <li><strong>Alouette III</strong> (Helicopter)</li>
+                        </ul>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                            <p class="text-sm text-blue-800 font-medium">
+                                <i class="fas fa-calendar-alt mr-2"></i> Established: September 28, 1971 (Air Force Day)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organization -->
+    <section id="organization" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold text-slate-900 section-title">Command Structure</h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch max-w-6xl mx-auto">
+                <!-- CAS Card -->
+                <div class="flex-1 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-xl p-8 shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-red-600 rounded-full opacity-20"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-sm uppercase tracking-widest text-slate-400 mb-1">Chief of Air Staff (CAS)</h3>
+                        <h2 class="text-3xl font-heading font-bold mb-4">Air Chief Marshal<br>Hasan Mahmood Khan</h2>
+                        <p class="text-slate-300 text-sm mb-6">Highest-ranking officer responsible for overall command, control, and administration.</p>
+                        <div class="inline-block bg-slate-700 px-3 py-1 rounded text-xs font-mono">Current as of 2025</div>
+                    </div>
+                </div>
+
+                <!-- HQ & Commands -->
+                <div class="flex-1 bg-white border border-slate-200 rounded-xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-building text-slate-500 mr-3"></i> Air Headquarters
+                    </h3>
+                    <p class="text-slate-600 mb-6">Located at Dhaka Cantonment, overseeing policy guidance from the Ministry of Defence.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-3 bg-slate-50 rounded border-l-2 border-red-500">
+                            <h4 class="font-bold text-slate-800">Operational</h4>
+                            <p class="text-xs text-slate-500">Combat & Missions</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded border-l-2 border-blue-500">
+                            <h4 class="font-bold text-slate-800">Maintenance</h4>
+                            <p class="text-xs text-slate-500">Serviceability</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded border-l-2 border-green-500">
+                            <h4 class="font-bold text-slate-800">Training</h4>
+                            <p class="text-xs text-slate-500">Personnel Dev</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded border-l-2 border-yellow-500">
+                            <h4 class="font-bold text-slate-800">Logistics</h4>
+                            <p class="text-xs text-slate-500">Supply Chain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Bases -->
+    <section id="bases" class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold text-slate-900 section-title">Strategic Air Bases</h2>
+                <p class="text-slate-600 mt-4 max-w-2xl mx-auto">A network of strategically located bases critical for national defense, training, and operational readiness.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Base 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-slate-800 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">BAF Base Bangabandhu</h3>
+                        <p class="text-red-600 text-sm font-medium mb-3"><i class="fas fa-map-marker-alt mr-1"></i> Kurmitola, Dhaka</p>
+                        <p class="text-slate-600 text-sm">Primary operational and administrative hub housing critical command elements.</p>
+                    </div>
+                </div>
+                <!-- Base 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-slate-800 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">BAF Base Bashar</h3>
+                        <p class="text-red-600 text-sm font-medium mb-3"><i class="fas fa-map-marker-alt mr-1"></i> Tejgaon, Dhaka</p>
+                        <p class="text-slate-600 text-sm">Specialises in technical and communications training for skilled personnel.</p>
+                    </div>
+                </div>
+                <!-- Base 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-slate-800 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">BAF Base Zahurul Haque</h3>
+                        <p class="text-red-600 text-sm font-medium mb-3"><i class="fas fa-map-marker-alt mr-1"></i> Chattogram</p>
+                        <p class="text-slate-600 text-sm">Crucial for air defense and maritime surveillance over the Bay of Bengal.</p>
+                    </div>
+                </div>
+                <!-- Base 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-slate-800 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">BAF Base Matiur Rahman</h3>
+                        <p class="text-red-600 text-sm font-medium mb-3"><i class="fas fa-map-marker-alt mr-1"></i> Jashore</p>
+                        <p class="text-slate-600 text-sm">Premier pilot training center where aviators receive flight instruction.</p>
+                    </div>
+                </div>
+                <!-- Base 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-slate-800 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">BAF Base Bir Sreshtho Matiur Rahman</h3>
+                        <p class="text-red-600 text-sm font-medium mb-3"><i class="fas fa-map-marker-alt mr-1"></i> Cox’s Bazar</p>
+                        <p class="text-slate-600 text-sm">Modern base designed for multirole fighters and enhanced coastal defense.</p>
+                    </div>
+                </div>
+                <!-- Base 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 opacity-75">
+                    <div class="bg-yellow-500 h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">BAF Base Sheikh Hasina</h3>
+                        <p class="text-yellow-600 text-sm font-medium mb-3"><i class="fas fa-hard-hat mr-1"></i> Barishal (Under Development)</p>
+                        <p class="text-slate-600 text-sm">Poised to become a significant hub for future expansion and air patrol.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aircraft Inventory -->
+    <section id="inventory" class="py-16 bg-slate-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold section-title">Aircraft Inventory</h2>
+                <p class="text-slate-400 mt-4">A diverse fleet meticulously chosen to fulfill operational requirements.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Combat -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div class="flex items-center mb-4 text-red-500">
+                        <i class="fas fa-jet-fighter text-3xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Combat Aircraft</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>Chengdu F-7BGI / F-7BG (Interceptor)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>Mikoyan MiG-29B/UB (Multirole)</span></li>
+                        <li class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500 italic">Looking to procure Eurofighter Typhoon, Rafale, or Gripen-E.</li>
+                    </ul>
+                </div>
+
+                <!-- Transport -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div class="flex items-center mb-4 text-blue-500">
+                        <i class="fas fa-plane text-3xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Transport</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>C-130J Super Hercules (Heavy Airlift)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>Antonov An-32</span></li>
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>Do-228 & Y-12 (Light Transport)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Trainers -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div class="flex items-center mb-4 text-yellow-500">
+                        <i class="fas fa-graduation-cap text-3xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Trainers</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>K-8W Karakorum (Jet Instruction)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>YAK-130 (Advanced Jet / Light Attack)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>PT-6 (Basic Propeller)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Helicopters -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div class="flex items-center mb-4 text-green-500">
+                        <i class="fas fa-helicopter text-3xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">Helicopters</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>Mi-17 / Mi-171Sh (Utility/Transport)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>Bell 212 / 206 (Training/Liaison)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>AW139 (VIP/SAR)</span></li>
+                    </ul>
+                </div>
+
+                <!-- UAVs -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div class="flex items-center mb-4 text-purple-500">
+                        <i class="fas fa-robot text-3xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-white">UAVs</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-check mt-1 mr-2 text-xs"></i> <span>Tactical Surveillance Drones</span></li>
+                        <li class="mt-4 pt-4 border-t border-slate-700 text-xs text-slate-500 italic">Plans for MALE combat drones (e.g., Wing Loong II).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers & Ranks -->
+    <section id="careers" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold text-slate-900 section-title">Join The Force</h2>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Requirements -->
+                <div class="lg:w-1/2">
+                    <div class="bg-blue-50 p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold mb-6 text-blue-900">Commissioned Officers</h3>
+                        <p class="mb-4 text-slate-700">Aspiring leaders apply to the <strong>Bangladesh Air Force Academy (BAFA)</strong>.</p>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h4 class="font-bold text-blue-800">Key Requirements</h4>
+                                <ul class="text-sm text-slate-600 mt-2 list-disc pl-4">
+                                    <li>Bangladeshi National</li>
+                                    <li>Age: 16.5 – 21 (Pilot), up to 25 (Specialist)</li>
+                                    <li>Education: Min GPA 4.5 in SSC & HSC (Science background for pilots)</li>
+                                    <li>Height: Min 5’4”, 6/6 Eyesight (Pilots)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h4 class="font-bold text-blue-800">Branches</h4>
+                                <p class="text-sm text-slate-600 mt-2">GD (Pilot), GD (Navigator), Engineering, ATC, ADWC, Admin, Logistics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ranks Table -->
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900">Ranks Structure</h3>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-heading font-bold text-red-600 border-b-2 border-red-200 pb-2 mb-4">Officers</h4>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="font-bold">Air Chief Marshal</li>
+                                <li>Air Marshal</li>
+                                <li>Air Vice Marshal</li>
+                                <li>Air Commodore</li>
+                                <li>Group Captain</li>
+                                <li>Wing Commander</li>
+                                <li>Squadron Leader</li>
+                                <li>Flight Lieutenant</li>
+                                <li>Flying Officer</li>
+                                <li>Pilot Officer</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-blue-600 border-b-2 border-blue-200 pb-2 mb-4">Airmen</h4>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="font-bold">Warrant Officer</li>
+                                <li>Sergeant</li>
+                                <li>Corporal</li>
+                                <li>Leading Aircraftman</li>
+                                <li>Aircraftman</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forces Goal 2030 -->
+    <section id="vision" class="py-16 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute right-0 bottom-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+            <div class="absolute left-0 top-0 w-64 h-64 bg-red-500 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-red-500 font-bold tracking-widest uppercase">Future Vision</span>
+                <h2 class="text-5xl font-heading font-bold mt-2">Forces Goal 2030</h2>
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-slate-300">
+                    An ambitious modernization programme to transform the BAF into a technologically advanced, self-reliant, and globally competitive air force.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Initiative 1 -->
+                <div class="bg-slate-800/50 backdrop-blur p-6 rounded-lg border border-slate-700 hover:border-red-500 transition">
+                    <i class="fas fa-fighter-jet text-3xl text-red-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">4.5 Gen Fighters</h3>
+                    <p class="text-slate-400 text-sm">Acquisition of sophisticated multirole fighter jets for air superiority.</p>
+                </div>
+                <!-- Initiative 2 -->
+                <div class="bg-slate-800/50 backdrop-blur p-6 rounded-lg border border-slate-700 hover:border-red-500 transition">
+                    <i class="fas fa-satellite-dish text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">IADS & Radar</h3>
+                    <p class="text-slate-400 text-sm">Integrated Air Defense Systems and nationwide radar network expansion.</p>
+                </div>
+                <!-- Initiative 3 -->
+                <div class="bg-slate-800/50 backdrop-blur p-6 rounded-lg border border-slate-700 hover:border-red-500 transition">
+                    <i class="fas fa-crosshairs text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">UAV & Missiles</h3>
+                    <p class="text-slate-400 text-sm">Integration of advanced drone technology and precision strike missiles.</p>
+                </div>
+                <!-- Initiative 4 -->
+                <div class="bg-slate-800/50 backdrop-blur p-6 rounded-lg border border-slate-700 hover:border-red-500 transition">
+                    <i class="fas fa-broadcast-tower text-3xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Electronic Warfare</h3>
+                    <p class="text-slate-400 text-sm">Satellite-based communications and information superiority capabilities.</p>
+                </div>
+                <!-- Initiative 5 -->
+                <div class="bg-slate-800/50 backdrop-blur p-6 rounded-lg border border-slate-700 hover:border-red-500 transition">
+                    <i class="fas fa-drafting-compass text-3xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">New Infrastucture</h3>
+                    <p class="text-slate-400 text-sm">Construction of new air bases in Barishal, Sylhet, and Rangpur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <i class="fas fa-fighter-jet text-4xl text-slate-600"></i>
+            </div>
+            <p class="mb-6 italic">"In War, In Peace, We are Everywhere for Our Country"</p>
+            <div class="text-sm">
+                <p>&copy; 2025 Bangladesh Air Force Informational Site. All Rights Reserved.</p>
+                <p class="mt-2 text-xs text-slate-600">Generated based on provided documentation.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
